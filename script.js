@@ -12,6 +12,7 @@ function Calculator(number1, number2, operator){
     }
     if(operator === "divide"){
         if(number2 != 0) return number1 / number2
+        else return "Cannot divide by zero"
     }
 }
 
@@ -29,17 +30,13 @@ function handleClick(){
     let numberOne = Number(num1);
     let numberTwo = Number(num2);
 
-    result.textContent = Calculator(numberOne, numberTwo, operation)
+    result.textContent = `Result: ${Calculator(numberOne, numberTwo, operation)}`
 }
 
 let calculate = document.querySelector('#calculate-btn')
 calculate.addEventListener('click', handleClick);
 
-// result = Calculator(numberOne, numberTwo, operation)
 
-
-
-// console.log(result);
 
  
 
